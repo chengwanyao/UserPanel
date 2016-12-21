@@ -12,10 +12,10 @@ var Cache: MethodDecorator = (target : any,propertyKey,descriptor : PropertyDesc
 
 enum Quality {
     WHITE = 1,
-    GREEN = 1.1,
-    BLUE = 1.2,
-    PURPLE = 1.4,
-    ORAGE = 1.8
+    GREEN = 1.2,
+    BLUE = 1.8,
+    PURPLE = 2.5,
+    ORAGE = 4,
 }
 
 enum WeaponType {
@@ -255,7 +255,7 @@ class Weapon extends Equipment{
          var result = 0;
          this.__jewelOnEquip.forEach(jewel => result += jewel.getFightPower() * 0.4);
          result += 10 * this.weaponType * this.quality; 
-         this.properties[0]=new Property("攻击力",result,false);
+         this.properties[0]=new Property("Attack",result,false);
          return result;
      }
 
@@ -264,7 +264,7 @@ class Weapon extends Equipment{
          var result = 0;
          this.__jewelOnEquip.forEach(jewel => result += jewel.getFightPower() * 0.4);
          result += 5 * this.quality / this.weaponType; 
-         this.properties[1]=new Property("敏捷",result,false);
+         this.properties[1]=new Property("Agile",result,false);
          return result;
      }
     
@@ -310,7 +310,7 @@ class Armor extends Equipment{
          var result = 0;
          this.__jewelOnEquip.forEach(jewel => result += jewel.getFightPower() * 0.4);
          result += 6 * this.armorType * this.quality; 
-         this.properties[0]=new Property("防御力",result,false);
+         this.properties[0]=new Property("Defense",result,false);
          return result;
      }
 
@@ -319,7 +319,7 @@ class Armor extends Equipment{
          var result = 0;
          this.__jewelOnEquip.forEach(jewel => result += jewel.getFightPower() * 0.4);
          result += 5 * this.quality / this.armorType; 
-         this.properties[1]=new Property("敏捷",result,false);
+         this.properties[1]=new Property("Agile",result,false);
          return result;
      }
 

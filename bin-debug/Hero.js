@@ -18,10 +18,10 @@ var Cache = function (target, propertyKey, descriptor) {
 var Quality;
 (function (Quality) {
     Quality[Quality["WHITE"] = 1] = "WHITE";
-    Quality[Quality["GREEN"] = 1.1] = "GREEN";
-    Quality[Quality["BLUE"] = 1.2] = "BLUE";
-    Quality[Quality["PURPLE"] = 1.4] = "PURPLE";
-    Quality[Quality["ORAGE"] = 1.8] = "ORAGE";
+    Quality[Quality["GREEN"] = 1.2] = "GREEN";
+    Quality[Quality["BLUE"] = 1.8] = "BLUE";
+    Quality[Quality["PURPLE"] = 2.5] = "PURPLE";
+    Quality[Quality["ORAGE"] = 4] = "ORAGE";
 })(Quality || (Quality = {}));
 var WeaponType;
 (function (WeaponType) {
@@ -247,14 +247,14 @@ var Weapon = (function (_super) {
         var result = 0;
         this.__jewelOnEquip.forEach(function (jewel) { return result += jewel.getFightPower() * 0.4; });
         result += 10 * this.weaponType * this.quality;
-        this.properties[0] = new Property("攻击力", result, false);
+        this.properties[0] = new Property("Attack", result, false);
         return result;
     };
     p.getAglie = function () {
         var result = 0;
         this.__jewelOnEquip.forEach(function (jewel) { return result += jewel.getFightPower() * 0.4; });
         result += 5 * this.quality / this.weaponType;
-        this.properties[1] = new Property("敏捷", result, false);
+        this.properties[1] = new Property("Agile", result, false);
         return result;
     };
     p.getEquipmentInformations = function () {
@@ -292,14 +292,14 @@ var Armor = (function (_super) {
         var result = 0;
         this.__jewelOnEquip.forEach(function (jewel) { return result += jewel.getFightPower() * 0.4; });
         result += 6 * this.armorType * this.quality;
-        this.properties[0] = new Property("防御力", result, false);
+        this.properties[0] = new Property("Defense", result, false);
         return result;
     };
     p.getAglie = function () {
         var result = 0;
         this.__jewelOnEquip.forEach(function (jewel) { return result += jewel.getFightPower() * 0.4; });
         result += 5 * this.quality / this.armorType;
-        this.properties[1] = new Property("敏捷", result, false);
+        this.properties[1] = new Property("Agile", result, false);
         return result;
     };
     p.getFightPower = function () {

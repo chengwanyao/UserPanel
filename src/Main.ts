@@ -137,11 +137,11 @@ class Main extends egret.DisplayObjectContainer {
     private createGameScene():void {
     
          this.user = new User("Player01",1);
-         this.hero = new Hero("H001","Heroine",Quality.ORAGE,1,"Hero_png",HeroType.SABER);
-         this.sword = new Weapon("W001","Leagendsword01",Quality.ORAGE,WeaponType.HANDSWORD,"Weapon_jpg");
-         this.helment = new Armor("A001","Purplrhelment01",Quality.PURPLE,ArmorType.LIGHTARMOR,"Helment_jpg");
-         this.Defence = new Armor("A002","GreenCorseler01",Quality.GREEN,ArmorType.LIGHTARMOR,"Defence_jpg");
-         this.Armour = new Armor("A003","BlueShoes01",Quality.BLUE,ArmorType.LIGHTARMOR,"Armour_jpg");
+         this.hero = new Hero("H001","Heroine",Quality.ORAGE,3,"Hero_png",HeroType.SABER);
+         this.sword = new Weapon("W001","Sword",Quality.ORAGE,WeaponType.HANDSWORD,"Weapon_jpg");
+         this.helment = new Armor("A001","Helment",Quality.PURPLE,ArmorType.LIGHTARMOR,"Helment_jpg");
+         this.Defence = new Armor("A002","Defence",Quality.GREEN,ArmorType.LIGHTARMOR,"Defence_jpg");
+         this.Armour = new Armor("A003","Armour",Quality.BLUE,ArmorType.LIGHTARMOR,"Armour_jpg");
          this.weaponJewel = new Jewel(Quality.ORAGE);
          this.armorJewel = new Jewel(Quality.WHITE); 
          this.sword.addJewl(this.weaponJewel);

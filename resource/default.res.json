@@ -1,0 +1,60 @@
+{
+	"groups": [
+		{
+			"keys": "bg_jpg,egret_icon_png,description_json,UserPanelBackGround_png,Weapon_jpg,Defence_jpg,Armour_jpg,Helment_jpg,Hero_png,BlackBackground_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "bg_jpg",
+			"type": "image",
+			"url": "assets/bg.jpg"
+		},
+		{
+			"name": "egret_icon_png",
+			"type": "image",
+			"url": "assets/egret_icon.png"
+		},
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "UserPanelBackGround_png",
+			"type": "image",
+			"url": "assets/UserPanelBackGround.png"
+		},
+		{
+			"name": "Weapon_jpg",
+			"type": "image",
+			"url": "assets/Weapon.jpg"
+		},
+		{
+			"name": "Defence_jpg",
+			"type": "image",
+			"url": "assets/Defence.jpg"
+		},
+		{
+			"name": "Armour_jpg",
+			"type": "image",
+			"url": "assets/Armour.jpg"
+		},
+		{
+			"name": "Helment_jpg",
+			"type": "image",
+			"url": "assets/Helment.jpg"
+		},
+		{
+			"name": "Hero_png",
+			"type": "image",
+			"url": "assets/Hero.png"
+		},
+		{
+			"name": "BlackBackground_png",
+			"type": "image",
+			"url": "assets/BlackBackground.png"
+		}
+	]
+}
